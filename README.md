@@ -7,11 +7,10 @@ The framework is build on three components:
    - Matlab backend to manage, distribute and modify tickets (./matlab_backend/)
 
 
-Demo version of the web-interface is located at
-https://www.cir.meduniwien.ac.at/visceral/tickets/demo/tickets/login.php
-
-Login information is given on request, please contact Markus Krenn (markus.krenn [at] meduniwien.ac.at).
+Login information for the [demo verison][ticketing_demo] of the web interface is given on request from [Markus Krenn][contact_mkrenn].
 
 Installation guidelines to set up the whole framework can be found in InstallationGuidelines.rtf of this repository.
 
 
+[ticketing_demo]: https://www.cir.meduniwien.ac.at/visceral/tickets/demo/tickets/login.php
+[contact_mkrenn]: http://www.cir.meduniwien.ac.at/team/markus-krenn/
