@@ -1,0 +1,6 @@
+2015-4-27|11:15:20: dbOpenConnection: DB Connection established!
+2015-4-27|11:16:40: dbOpenConnection: DB Connection established!
+2015-4-27|11:16:40: dbExecuteStatement: SQL Statement executed correctly!
+2015-4-27|11:16:40: DB-INFO (dbGetVolumes): 6 volumes selected!
+2015-4-27|11:16:40: 
+2015-4-27|11:16:41: dbCloseConnection: DB Connection closed!

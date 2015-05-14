@@ -1,0 +1,39 @@
+﻿Installation Guidelines 
+
+VISCERAL Annotation Ticketing Framework
+
+The VISCERAL annotation ticketing framework provides backend and frontend components to manage the distribution of annotation tickets of multiple annotation types to multiple annotators.
+This document contains installation guidelines to set up the whole framework.
+
+Author: Markus Krenn, Medical University of Vienna (markus.krenn@meduniwien.ac.at)
+The framework is build on three components:
+1. MySQL DB to store all entities of the ticketing framework (tickets, annotators, volumes, annotation types,...)
+2. Webinterface, as frontend for annotators to submit annotations and quality checks.
+3. Matlab backend to manage, distribute and modify tickets, annotation types, subjects to annotate and annotators.
+Requirements:
+The following software systems are required to set up the VISCERAL annotation ticketing framework on a local machine.
+MATLAB distribution including the Database Toolbox (http://de.mathworks.com/products/database/)
+Web server supporting PHP and MySQL
+SFTP server to store submitted annotations
+Stepwise installation guide:
+1. Creating the Data base:
+All required create statements are located at ./db/
+1.1) Use “createStatements.sql” to create all required tables.
+1.2) Execute “annotation_latest_idx.sql” and “fullLatestAnnotation_view.sql” to create views required (sequence important!)
+1.3) Execute “latestAnnotationTickets.sql”, “setAnnotationStatus.sql” and “setQCAnnotationStatus.sql” to create stored procedures, required for interaction of web-interface and DB.
+
+2. Set up the web interface
+The HTML & php sources are given at ./frontend/ of the repository.
+Copy all files to your web server and modify the following files according to your settings:
+ - /frontend/visceral/tickets/Config.php: Enter the your database (host adress, user, password and schema name) and the SFTP server details (hostname, user password).
+ - ./frontend/visceral/tickets/FtpUpload.php: Edit the data path of the upload directory on your SFTP server in line 56 (PATH_OF_DATADIR_ON_FTP_SERVER)
+
+3. SFTP server:
+- Ensure that all directories listed in the DB table annotationType are available on the upload directory of the SFTP server (default configuration: “manual_annotations”, “manual_landmark_annotations”, “manual_lesion_annotations”)
+4. Matlab Backend
+4.1) Set data paths (where you want to store volumes, annotations,...) in ./matlab_backend/initializeFramework
+4.2) Set DB connection details in ./matlab_backend/db_functions/dbOpenConnection.m  
+4.3)  Run ./matlab_backend/tutorial.m to learn how to modify and handle annotation tickets, volumes, annotators...
+
+
+

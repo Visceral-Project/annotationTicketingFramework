@@ -1,0 +1,112 @@
+
+body {
+	background-color: white;
+	color: #000305;
+	font-size: 87.5%; /* base fontsize is 14px */
+	font-family: Arial, 'Lucida Sans Unicode';
+	line-height: 1.5;
+	text-align: left;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:link, a:visited {
+}
+
+a:hover, a:active {
+}
+
+.body {
+	margin: 0 auto;
+	width: 80%;
+	clear: both;
+}
+
+.mainheader img {
+	width: 40%;
+	height: auto;
+	margin: 2% 0;
+}
+
+.mainheader nav {
+	background-color: #666;
+	height: 40px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.mainheader nav ul {
+	list-style: none;
+	margin: 0 auto;
+}
+
+.mainheader nav ul li {
+	float: left;
+	display: inline;
+}
+
+.mainheader nav a:link, .mainheader nav a:visited {
+	color: #FFF;
+	display: inline-block;
+	padding: 10px 25px;
+	height: 20px;
+}
+
+.mainheader nav a:hover, .mainheader nav a:active,
+.mainheader nav .active a:link, mainheader nav .active a:visited {
+	background-color: #d95454;
+	text-shadow: none;
+}
+
+.mainheader nav ul li a {
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.maincontent {
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	line-height: 25px;
+	overflow: hidden;
+}
+
+.content {
+	width: 70%;
+	float: left;
+	margin-top: 25px;
+	margin-left: 25px;
+}
+
+.topcontent {
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.usersettings table td {
+	padding: 5px;
+}
+
+.ticketcontent table th {
+	text-align: center;
+	border: 1px solid black;
+	background-color: #666;
+	color: white;
+}
+
+.ticketcontent table td {
+	padding: 2px;
+	text-align: center;
+	border: 1px solid black;
+}
+
+.login {
+	margin: 0 auto;
+	width: 50%;
+	clear: both;
+}
