@@ -66,8 +66,7 @@ function uploadAnnotationFTP($dbConn, $selectedTicket)
       } else {
 
           $config = visceral\Config::getSFTPHostConfig();
-          // move file to OPTIMA sftp server
-          // $ftpConn = ftp_connect($config['host']) or die("Could not connect to OPTIMA sftp server!");
+          // move file to sftp server
 		  
 		  $sftp = new Net_SFTP($config['host']);
 		  
@@ -80,7 +79,7 @@ function uploadAnnotationFTP($dbConn, $selectedTicket)
 			// echo $sftp->pwd() . "<br>"; // show path of current directory
 			
 				// upload file
-    			if ($sftp->put($remoteFile, $localFile))
+    			if ($sftp->put($remoteFile, $localFile,NET_SFTP_LOCAL_FILE))
 			  	{
 			  		echo "<b>Status:</b> Ticket " . $remoteFile . " uploaded successfully to server!";
 
